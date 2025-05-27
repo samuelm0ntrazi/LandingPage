@@ -1,0 +1,788 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: raleway;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #2a2b2d;
+}
+
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo > img {
+    height: 110;
+    width: 110px;
+    text-align: center;
+}
+
+#logo > h1 {
+    margin-top: 10px;
+    font-size: 50px;
+    padding: 5px 0px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: white;
+}
+
+header > nav > ul {
+    display: flex;
+    align-items: center;
+}
+
+header > nav > ul > li {
+    list-style: none;
+    padding: 15px 10px;
+}
+
+header > nav > ul > li > a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    padding: 8px 10px;
+    font-family: "Fjalla One", sans-serif;
+}
+
+header > nav > ul > li > a:hover{
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.308);
+}
+
+#banner {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  /* Torna o banner proporcional em todas as telas */
+  #banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+  }
+  
+  /* Media queries para melhorar visual em telas menores */
+  @media (max-width: 1024px) {
+    #banner {
+      height: auto;
+    }
+  
+    #banner img {
+      object-fit: contain;
+    }
+  }
+
+  #sobre {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-color: #2a2b2d;
+  }
+
+  #sobre > .img {
+    height: 100%;
+    width: 50%;
+  }
+  #sobre > .img > img {
+    width: 50%;
+    height: 500px;
+    object-fit: cover;
+    margin-left:150px ;
+  }
+  
+  #sobre > .sobre {
+    display: flex;
+    height: 100%;
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #sobre > .sobre > p {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 25px;
+    padding-right: 50px;
+    font-size: 25px;
+    color: white;
+    margin-right: 100px;
+    text-align: justify;
+  }
+
+#produtos {
+  background-color: #2793A7;
+  padding: 60px 20px;
+  color: white;
+}
+
+.produtos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.produtos-container > h1 {
+  width: 100%;
+  font-size: 50px;
+}
+
+.produtos-container > h2 {
+  width: 100%;
+  font-weight: normal;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+
+.produto-principal {
+  text-align: center;
+  max-width: 450px;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.relogio-img {
+  display: none;
+  width: 100%;
+  height: 100%;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 15px;
+}
+
+.relogio-img.active {
+  display: block;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 10px 0;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+.produto-principal .preco {
+  font-size: 1.5em;
+  margin-top: 10px;
+  font-weight: bold;
+  color: #00ccff;
+}
+
+.botao {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 25px;
+  color: white;
+}
+
+.saiba-mais {
+  height: 30px;
+  width: 90%;
+  margin-top: 50px;
+}
+
+.saiba-mais > a > button{
+  height: 45px;
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  font-size: 22px;
+}
+
+.saiba-mais > a > button:hover{
+  cursor: pointer;
+  background-color: white;
+  color: #2793A7;
+}
+
+.acessorios {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+
+.item {
+  max-width: 300px;
+  text-align: center;
+}
+
+.item img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.item .preco {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #00ccff;
+  margin-top: 8px;
+}
+
+#solucoes > .container {
+  display: flex;
+  height: 600px;
+}
+
+.img-braco {
+  width: 50%;
+  height: 100%;
+}
+
+.img-braco > img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.txt {
+  width: 50%;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  padding-left: 25px;
+  padding-right: 50px;
+  margin-right: 100px;
+  margin-left: 50px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.txt > h1 {
+  font-size: 50px;
+  margin-bottom: 60px;
+
+}
+.txt > p {
+  font-size: 25px;
+ 
+}
+
+#beneficio{
+  background-color: #2a2b2d;
+  padding-top: 30px;
+  text-align: center;
+}
+
+#beneficio > h1 {
+  color: white;
+  font-size: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+#beneficio > h2 {
+  color: white;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  font-size: 25px;
+  font-weight: normal;
+}
+
+#beneficio .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  justify-content: center;
+  justify-items: center;
+}
+
+#beneficio .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centraliza horizontalmente */
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  width: 300px;
+}
+
+#beneficio .container-imagem img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 12px; /* espaço abaixo da imagem */
+}
+
+#beneficio .container-desc p {
+  margin: 5px 0;
+  color: white;
+}
+
+#beneficio .container-desc p strong {
+  font-size: 1.1rem;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  #beneficio .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  #beneficio .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+#secao4 {
+    margin-bottom: 0px;
+    background-color: #2793A7;
+    padding-bottom: 20px;
+    background-image: url(img/Img-fundo.png);
+    padding-bottom: 65px;
+}
+
+#secao4 > h2 {
+    text-align: center;
+    font-size: 40px;
+    color: white;
+    margin-bottom: 10px;
+    padding-top: 55px;
+    padding-bottom: 30px;
+}
+
+#secao4 > form {
+    border: 1px solid #2a2b2d;
+    border-radius: 15px;
+    width: 580px;
+    height: 400px;
+    margin: auto;
+    margin-top: 15px;
+    padding: 15px 0px;
+    background-color: rgba(233, 233, 233, 0.893);
+}
+
+#secao4 > form > label{
+    display: block;
+    padding: 10px;
+    font-size: 18px;
+    margin: 0px 25px;
+    color: #2793A7;
+    font-weight: bold;
+}
+
+#secao4 > form > input {
+    height: 30px;
+    width: 85%;
+    margin: 10px 35px;
+    border: 0.2px solid  2a2b2d;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 0px 8px;
+    color: rgba(26, 26, 26, 0.8);
+}
+
+#secao4 > form > input:focus{
+    background-color: rgba(255, 227, 231, 0.166);
+    outline: 0;
+}
+
+#secao4 > form > textarea{
+    width: 85%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding: 5px;
+    text-align: start;
+    resize: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 0.2px solid  2a2b2d;
+    color: rgba(26, 26, 26, 0.8);
+}
+
+#secao4 > form > textarea:focus{
+    background-color: rgba(255, 227, 231, 0.166);
+    outline: 0;
+}
+
+#secao4 > form > .button-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#secao4 > form > .button-form > a {
+    height: 30px;
+    width: 50%;
+    margin: 10px;
+}
+
+#secao4 > form > .button-form > a > button {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: 2a2b2d;
+    font-size: 16px;
+    text-decoration: none;
+    border: 1px solid #2a2b2d;
+    border-radius: 3px;
+}
+
+#secao4 > form > .button-form > a > button:hover {
+cursor: pointer;
+    background-color: 2a2b2d;
+    color: #2793A7
+}
+
+#secao5{
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+}
+
+.final{
+  height: auto;
+  width: 80%;
+}
+.final > h1 {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 55px;
+}
+.final > h2{
+  font-size: 25px;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+.final > button{
+  color: white;
+  text-align: center;
+  height: 50px;
+  width: 50%;
+  margin-top: 15px;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.719);
+  font-size: 16px;
+  margin-bottom: 15px;
+  background-color: #2793A7;
+}
+
+footer {
+  margin-top: 50px;
+  height: 60px;
+  width: 100%;
+  background-color: #2a2b2d;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rodape > p{
+  color: white;
+}
+
+@media (max-width: 768px) {
+  #sobre {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #sobre > .img, #sobre > .sobre {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #sobre > .img > img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+
+  #sobre > .sobre > p {
+    font-size: 18px;
+    margin-right: 0;
+  }
+}
+@media (max-width: 768px) {
+  .produtos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produto-principal, .acessorios {
+    width: 90%;
+  }
+
+  .botao {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .saiba-mais {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  #solucoes > .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .img-braco, .txt {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .txt > h1 {
+    font-size: 32px;
+  }
+
+  .txt > p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 640px) {
+  #secao4 > form {
+    width: 90%;
+    height: auto;
+  }
+
+  #secao4 > form > input,
+  #secao4 > form > textarea {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  #secao4 > form > .button-form > a {
+    width: 80%;
+  }
+}
+@media (max-width: 600px) {
+  .final > button {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .final > h1 {
+    font-size: 32px;
+  }
+
+  .final > h2 {
+    font-size: 18px;
+  }
+}
+
+/* ========== AJUSTES DE RESPONSIVIDADE ========== */
+
+@media (max-width: 768px) {
+  header > nav > ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+  }
+
+  #sobre {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #sobre > .img, #sobre > .sobre {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+  }
+
+  #sobre > .img > img {
+    width: 80%;
+    height: auto;
+    margin: auto;
+  }
+
+  #sobre > .sobre > p {
+    font-size: 18px;
+    margin-right: 0;
+  }
+
+  .produtos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produto-principal, .acessorios {
+    width: 90%;
+  }
+
+  .botao {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .saiba-mais {
+    width: 100%;
+  }
+
+  #solucoes > .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .img-braco, .txt {
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+
+  .txt > h1 {
+    font-size: 32px;
+  }
+
+  .txt > p {
+    font-size: 18px;
+  }
+
+  #secao4 > form {
+    width: 90%;
+    height: auto;
+  }
+
+  #secao4 > form > input,
+  #secao4 > form > textarea {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  #secao4 > form > .button-form > a {
+    width: 80%;
+  }
+
+  .final > button {
+    width: 90%;
+    font-size: 14px;
+  }
+
+  .final > h1 {
+    font-size: 32px;
+  }
+
+  .final > h2 {
+    font-size: 18px;
+  }
+}
+
+.carrossel-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.carousel-wrapper-acessorios,
+.carousel-wrapper-chips {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.acessorio-img,
+.chip-img {
+  display: none;
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+.acessorio-img.active,
+.chip-img.active {
+  display: block;
+}
+
+.dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin: 15px 0;
+}
+
+.dot-ac,
+.dot-chip {
+  height: 10px;
+  width: 10px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.4;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.dot-ac.active,
+.dot-chip.active {
+  opacity: 1;
+}
+
+.descricao-acessorio,
+.descricao-chip {
+  text-align: center;
+}
+
+.descricao-acessorio h3,
+.descricao-chip h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.descricao-acessorio p,
+.descricao-chip p {
+  font-size: 16px;
+}
